@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+/* Variables */
+
+:root {
+    --white : #ffffff;
+    --pink : #e71969;
+    --orange : #f56306;
+    --black-op-85: rgba(0, 0, 0, 0.85);
+    --dark-pink : #991e5f;
+    --gray : #cdcdcd;
+    --dark-gray : #a2a2a2;
+    --orange-dark : #ff2400;
+    --opacity-50 : 0.5;
+
+}
+
+body {
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+/* Barre de navigation */
+nav {
+    background-color: var(--black-op-85); /*red, green, blue, alpha*/
+    position: fixed; 
+    text-transform: uppercase;
+    top :0px;
+    right: 0px;
+    left: 0px;
+    /*bottom : 0px ; si l'on souhaite la mettre en bas */
+
+}
+
+/* L'espace est similaire à "l'intérieur" */
+nav .container {
+    display: flex;
+    justify-content: space-between; /* horizontal */
+    align-items: center; /* vertical */
+    height: 65px;
+}
+
+nav .container a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--white);
+}
+
+nav .container ul {
+    display: flex;
+    list-style: none;
+    gap : 20px;
+}
+
+nav .container ul a {
+    color: var(--white);
+    opacity : var(--opacity-50);
+    transition: opacity 500ms;
+}
+
+nav .container ul a:hover {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+/*header */
+
+header h1 {
+    margin: 0px;
+    font-size: 6em;
+    color: var(--white);
+}
+
+header h2 {
+    font-size: 4em;
+    margin-top: 10px;
+    margin-bottom : 80px;
+}
+
+header {
+    background-color: brown;
+    /* background: rgb(180,58,58); */
+    /* background: linear-gradient(90deg, rgba(180,58,58,1) 0%, rgba(255,38,0,1) 50%, rgba(252,102,69,1) 100%); */
+    background: linear-gradient(to right, var(--pink), var(--orange));
+    color: var(--white, #ffffff); /* Si tu ne trouves pas la variable --white alors remplacer par #ffffff */
+    text-align: center;
+    padding : 215px 0px;
+}
+
+header .btn {
+    color: var(--white);
+    text-decoration: none;
+    background-color: var(--dark-pink,#991e5f);
+    padding: 30px 45px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: background-color, 500ms;
+    letter-spacing: 0.2em;
+}
+
+header .btn:hover {
+    background-color: #e70d7a;
+    transition: background-color, 500ms;
+}
+
+
+/*Sections */
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* horizontal */
+    gap : 150px; /* espacement entre colonne */
+    margin: 150px 0px;
+}
+
+main section h3 {
+    font-size: 3em;
+    font-weight: lighter;
+    margin: 0;
+}
+
+ main section img {
+    border-radius: 100%;
+    width: 46%;
+ }
+
+ /*Pied de page */
+
+ footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    border-top : 1px solid var(--gray);
+    color : var(--dark-gray);
+ }
